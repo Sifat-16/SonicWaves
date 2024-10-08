@@ -17,7 +17,30 @@ typedef OnError = void Function(Exception exception);
 
 /// The app is deployed at: https://bluefireteam.github.io/audioplayers/
 void main() {
-  runApp(const MaterialApp(home: _ExampleApp()));
+  runApp(const MaterialApp(home: Entry()));
+}
+
+class Entry extends StatefulWidget {
+  const Entry({super.key});
+
+  @override
+  State<Entry> createState() => _EntryState();
+}
+
+class _EntryState extends State<Entry> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: TextButton(
+            onPressed: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => _ExampleApp()));
+            },
+            child: Text("Go to example app")),
+      ),
+    );
+  }
 }
 
 class _ExampleApp extends StatefulWidget {

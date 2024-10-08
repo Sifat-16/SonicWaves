@@ -13,4 +13,7 @@ enum PlayerMode {
   /// Also, it is not possible to use the seek method to set the audio to a
   /// specific position.
   lowLatency,
+
+  /// Ideal for long media files or streams with background playback
+  backgroundPlayer
 }
