@@ -67,7 +67,7 @@ class _SourcesTabState extends State<SourcesTab>
 
   Future<void> _play(Source source) async {
     await player.stop();
-    await player.play(source);
+    await player.play(source, mode: PlayerMode.backgroundPlayer);
     toast(
       'Set and playing source.',
       textKey: const Key('toast-set-play'),

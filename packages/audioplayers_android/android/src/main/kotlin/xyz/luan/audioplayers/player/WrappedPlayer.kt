@@ -9,6 +9,7 @@ import xyz.luan.audioplayers.EventHandler
 import xyz.luan.audioplayers.PlayerMode
 import xyz.luan.audioplayers.PlayerMode.LOW_LATENCY
 import xyz.luan.audioplayers.PlayerMode.MEDIA_PLAYER
+import xyz.luan.audioplayers.PlayerMode.BACKGROUND_PLAYER
 import xyz.luan.audioplayers.ReleaseMode
 import xyz.luan.audioplayers.source.Source
 import kotlin.math.min
@@ -343,6 +344,7 @@ class WrappedPlayer internal constructor(
         return when (playerMode) {
             MEDIA_PLAYER -> MediaPlayerPlayer(this)
             LOW_LATENCY -> SoundPoolPlayer(this, soundPoolManager)
+            BACKGROUND_PLAYER -> SonicPlayer(this)
         }
     }
 

@@ -15,7 +15,10 @@ dependencies:
 dev_dependencies:
   # Integration tests for audioplayers_platform_interface are handled 
   # in this package to avoid maintaining multiple example apps:
-  audioplayers_platform_interface: ^7.0.0
+  audioplayers_platform_interface:
+    git:
+      url: https://github.com/Sifat-16/SonicWaves.git
+      path: 'packages/audioplayers_platform_interface'
   flame_lint: ^1.0.0
   flutter_test:
     sdk: flutter
