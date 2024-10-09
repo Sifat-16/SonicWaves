@@ -14,10 +14,7 @@ flutter:
         pluginClass: AudioplayersDarwinPlugin
 
 dependencies:
-  audioplayers_platform_interface:
-    git:
-      url: https://github.com/Sifat-16/SonicWaves.git
-      path: 'packages/audioplayers_platform_interface'
+  audioplayers_platform_interface: ^7.0.0
   flutter:
     sdk: flutter
 
